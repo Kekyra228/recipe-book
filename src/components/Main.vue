@@ -22,13 +22,11 @@ const handleClick = (currRecipe: Recipe) => {
 <template>
   <header>
     <h1>Recipe Book</h1>
-    <nav>
-      <!-- <ul>
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Все рецепты</a></li>
-        <li><a href="#">Добавить рецепт</a></li>
-      </ul> -->
-    </nav>
+    <!-- <nav>
+      <ul v-for="recipe in recipes" :key="recipe.idMeal">
+        <li>{{ recipe.strCategory }}</li>
+      </ul>
+    </nav> -->
   </header>
 
   <main>

@@ -30,7 +30,13 @@ const ingredients = () => {
   <div class="contain">
     <section v-if="recipe" class="recipe-details">
       <div class="title-img-section">
-        <h2>{{ recipe.strMeal }}</h2>
+        <div class="meal-description">
+          <h2>{{ recipe.strMeal }}</h2>
+          <div class="meal-details">
+            <p>{{ recipe.strCategory }}</p>
+            <p>{{ recipe.strArea }}</p>
+          </div>
+        </div>
         <img
           :src="recipe.strMealThumb"
           :alt="recipe.strMeal"
@@ -82,13 +88,20 @@ const ingredients = () => {
   border-bottom: 1px solid #ccc;
   margin-bottom: 20px;
 }
-
-h2 {
+.meal-description {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  text-align: left;
+}
+.meal-description h2 {
   font-size: 36px;
   font-weight: bold;
-  margin-left: 40px;
 }
-
+.meal-details {
+  display: flex;
+  gap: 20px;
+}
 .recipe-img {
   width: 200px;
   height: 200px;

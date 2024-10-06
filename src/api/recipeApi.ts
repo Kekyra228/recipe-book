@@ -3,6 +3,8 @@ export interface Recipe {
   strMeal: string;
   strMealThumb: string;
   strInstructions: string;
+  strCategory: string;
+  strArea: string;
 }
 
 export async function getRecipes(): Promise<Recipe[]> {
